@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "credit-card-customer-segmentation"
+version = "0.1.0"
+description = "A Python package for customer segmentation analysis using K-means clustering on credit card usage data"
+authors = ["Your Name <your.email@example.com>"]
+readme = "README.md"
+license = "MIT"
+packages = [{include = "credit_card_segmentation"}]
+repository = "https://github.com/sempedia/credit_card_customer_segmentation"
+keywords = ["customer segmentation", "clustering", "credit card", "machine learning", "data analysis"]
+
+[tool.poetry.scripts]
+credit-card-segmentation = "credit_card_segmentation.cli:cli"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "^2.2.0"
+numpy = "^1.24.0"
+matplotlib = "^3.8.0"
+seaborn = "^0.13.0"
+scikit-learn = "^1.4.0"
+jupyter = "^1.0.0"
+ipykernel = "^6.29.0"
+click = "^8.1.7"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.0.0"
+black = "^23.0.0"
+isort = "^5.12.0"
+flake8 = "^6.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ['py310']
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
